@@ -1,0 +1,7 @@
+export { default as Layout } from './Layout/Layout'
+export { default as Section } from './Layout/Section/Section'
+export { default as Carousel } from './Carousel/Carousel'
+export { default as DetailsSection } from './Details-Section/Details-Section'
+export { default as MainCard } from './Main-Card/Main-Card'
+export { default as PopularCard } from './Popular-Card/Popular-Card'
+export { default as SocialMedia } from './Social-Media/Social-Media'
