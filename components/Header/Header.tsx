@@ -8,7 +8,7 @@ import HeaderOption from './Header-Option/Header-Option'
 import { Breadcrumbs } from '../ui'
 import { HeaderContext } from '../../context/Header-Context'
 import Logo from './Logo/Logo'
-import data from './demo-data/data.json'
+import data from '../../demo-data/data.json'
 
 const Header: React.FC = () => {
   const { subNavType, isOpen, setMenu, menu, isDropdownOpen } =

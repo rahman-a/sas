@@ -161,9 +161,12 @@
     h2 {
       color: var(--white-color);
       text-transform: capitalize;
+      @include media.breakpoint(md) {
+        padding: 2rem 0;
+      }
     }
     @include media.breakpoint(md) {
-      padding-left: 2rem;
+      padding-left: 1rem;
     }
   }
 }

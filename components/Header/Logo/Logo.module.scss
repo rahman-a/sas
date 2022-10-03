@@ -3,7 +3,7 @@
 .logo {
   position: relative;
   width: 5rem;
-  z-index: 99;
+  z-index: 999;
   &__hidden {
     @include media.breakpoint(md) {
       display: none;

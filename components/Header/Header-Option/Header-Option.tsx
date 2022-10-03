@@ -5,7 +5,7 @@ import { Magnifier } from '../../icons'
 import { HeaderContext } from '../../../context/Header-Context'
 import Locations from '../Locations/Locations'
 import { Hamburger } from '../../ui'
-import locations from '../demo-data/territories.json'
+import locations from '../../../demo-data/territories.json'
 
 const HeaderOption: FunctionComponent = () => {
   const {

@@ -32,6 +32,8 @@
   }
 
   &__search {
+    position: relative;
+    z-index: 999;
     span:last-child {
       @include media.breakpoint(md) {
         display: none;
@@ -57,7 +59,7 @@
   &__hamburger {
     display: none;
     position: relative;
-    z-index: 99;
+    z-index: 999;
     @include media.breakpoint(md) {
       display: block;
     }

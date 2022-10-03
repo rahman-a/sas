@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext, useRef } from 'react'
 import styles from './Featured-Posts.module.scss'
 import FeaturedPost from './Featured-Post'
-import featuredPostsList from '../demo-data/featured.json'
+import featuredPostsList from '../../../demo-data/featured.json'
 import { HeaderContext } from '../../../context/Header-Context'
 import { Post } from '../../../types/Featured'
 
