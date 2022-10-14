@@ -80,7 +80,7 @@ const SubMenuLevelThree: React.FC<SubMenuLevelThreeProps> = ({
       />
       <nav className={navClasses}>
         {subMenuContent.map((item: MenuItem) => (
-          <Link href='#' key={item._id}>
+          <Link href={item.link} key={item._id}>
             <a
               className={linkClasses}
               onClick={() => handleNavigation(item.link)}

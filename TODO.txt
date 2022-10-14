@@ -1,0 +1,6 @@
+11/10/2022
+- create image-card
+- create tabbed interface
+- create different button variant
+- implement buttons with details section
+- create industry item page

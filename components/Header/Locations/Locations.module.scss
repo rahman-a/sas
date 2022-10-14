@@ -5,7 +5,7 @@
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   transform: translateY(-1.2rem);
-  z-index: 999;
+  z-index: 9999;
 
   &__dropdown {
     @include media.breakpoint(md) {

@@ -1,7 +1,7 @@
 @use '../../styles/media' as media;
 
 .breaknews {
-  background-color: var(--background-color);
+  background-color: var(--background-color-dark);
   &__wrapper {
     display: flex;
     align-items: center;

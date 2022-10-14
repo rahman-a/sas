@@ -1,53 +1,57 @@
-/**
- * filled button
- * elevated button
- * outlined button
- * tonal button
- * text button
- *  plus icon
- */
-
 import React, { FunctionComponent } from 'react'
-import styles from './Button.module.scss'
-import { RightArrow } from '../../icons'
 import classnames from 'classnames'
+import styles from './Button.module.scss'
+import { RightArrow, LongRightArrow, ThickLongRightArrow } from '../../icons'
+import { ButtonType } from '../../../types/Button'
 
-// type Variants = 'filled' | 'elevated' | 'outlined' | 'tonal' | 'text'
-interface ButtonProps {
-  text: string
-  border?: string
-  bg?: string
-  icon?: JSX.Element
-  className?: string
-  onClick?: () => void
-}
-
-const Button: FunctionComponent<ButtonProps> = ({
-  text,
-  onClick,
-  border,
-  bg,
-  icon,
+const Button: FunctionComponent<ButtonType> = ({
+  variant,
   className,
+  children,
+  style,
+  icon,
+  disabled,
+  onClick,
+  as,
+  href,
 }) => {
-  const btnStyles = () => {
-    return {
-      backgroundColor: bg ? bg : 'transparent',
-      border: border ? `2px solid ${border}` : 'none',
-    }
-  }
+  const btnClasses = classnames(styles.btn, {
+    [styles['btn__dark-primary']]: variant === 'dark-primary',
+    [styles['btn__dark-white']]: variant === 'dark-white',
+    [styles['btn__white']]: variant === 'white',
+    [styles['btn__outlined']]: variant === 'primary-outlined',
+    [styles['btn__secondary-outlined']]: variant === 'secondary-outlined',
+    [styles['btn__gray-outlined']]: variant === 'gray-outlined',
+    [styles['btn__text']]: variant === 'text',
+    [styles['btn__wide']]: icon,
+    [styles['btn__disabled-text']]: variant === 'text' && disabled,
+    [styles['btn__disabled']]: disabled,
+    [className as string]: className,
+  })
+  const AsComponent = as ?? 'button'
   return (
-    <button
-      className={`${styles.btn} ${className ? className : ''}`}
-      style={btnStyles()}
-      onClick={(e) => {
-        e.stopPropagation()
-        onClick && onClick()
-      }}
-    >
-      {text}
-      {icon && <span className={styles.btn__icon}>{icon}</span>}
-    </button>
+    <div className={styles.demo}>
+      <AsComponent
+        href={href}
+        onClick={onClick}
+        className={btnClasses}
+        style={style}
+        disabled={disabled}
+      >
+        {children}
+        {icon && (
+          <span className={styles.btn__icon}>
+            {icon === 'arrow' ? (
+              <LongRightArrow />
+            ) : icon === 'thick-arrow' ? (
+              <ThickLongRightArrow />
+            ) : (
+              <RightArrow />
+            )}
+          </span>
+        )}
+      </AsComponent>
+    </div>
   )
 }
 

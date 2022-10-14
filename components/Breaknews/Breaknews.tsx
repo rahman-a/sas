@@ -1,20 +1,21 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import styles from './Breaknews.module.scss'
 import { RightArrow } from '../icons'
 import { Button } from '../ui'
 
-const BreakNews = () => {
+const BreakNews: FunctionComponent = () => {
   return (
     <div className={styles.breaknews}>
       <a href='#' className={styles.breaknews__wrapper}>
         <div className={styles.breaknews__data}>
           <h2>what is new equation?</h2>
           <Button
-            border='#333'
-            text='Learn more'
-            icon={<RightArrow />}
+            variant='primary-outlined'
+            icon
             className={styles.breaknews__wrapper_btn}
-          />
+          >
+            Learn more
+          </Button>
         </div>
         <div className={styles.breaknews__decorator}>
           <span></span>

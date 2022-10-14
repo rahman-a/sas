@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useState } from 'react'
+import React, { FunctionComponent, useEffect, useState } from 'react'
 import styles from './Carousel.module.scss'
 import { ThickLongRightArrow } from '../icons'
 import data from '../../demo-data/carousel.json'
 import classNames from 'classnames'
 
-const Carousel = () => {
+const Carousel: FunctionComponent = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0)
   const [initialTouchPosition, setInitialTouchPosition] = useState<number>(0)
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import Head from 'next/head'
 import Header from '../Header'
 import Footer from '../Footer/Footer'
@@ -7,7 +7,7 @@ interface LayoutProps {
   children: JSX.Element[] | JSX.Element
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
   return (
     <>
       <Head>
@@ -28,7 +28,7 @@ const Layout = ({ children }: LayoutProps) => {
       </Head>
       <Header />
       <main> {children} </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
