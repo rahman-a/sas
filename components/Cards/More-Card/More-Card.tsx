@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import styles from './More-Card.module.scss'
-import { Button } from '../../ui'
-import { MoreCard } from '../../../types/Section'
+import { Button } from '@components/ui'
+import { MoreCard } from '@customTypes/Section'
 
 interface MoreCardProps {
   card: MoreCard

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { FunctionComponent, useContext, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import classNames from 'classnames'
 import styles from './Header.module.scss'
@@ -6,11 +6,11 @@ import Navbar from './Navbar/Navbar'
 import DropdownMenu from './Dropdown-Menu/Dropdown-Menu'
 import HeaderOption from './Header-Option/Header-Option'
 import { Breadcrumbs } from '../ui'
-import { HeaderContext } from '../../context/Header-Context'
+import { HeaderContext } from '@context/Header-Context'
 import Logo from './Logo/Logo'
-import data from '../../demo-data/data.json'
+import data from '@data/data.json'
 
-const Header: React.FC = () => {
+const Header: FunctionComponent = () => {
   const { subNavType, isOpen, setMenu, menu, isDropdownOpen } =
     useContext(HeaderContext)
   const router = useRouter()

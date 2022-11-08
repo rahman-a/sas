@@ -1,21 +1,49 @@
-import React, { useState } from 'react'
+import React, { FunctionComponent, useEffect, useState } from 'react'
 import styles from './Hero-Section.module.scss'
 import { Share } from '../icons'
+import classnames from 'classnames'
 import CopyBox from '../Copy-Box/Copy-Box'
+import { HeroSection } from '@customTypes/Hero-Section'
 
-const HeroSection = () => {
+type HeroSectionProps = {
+  data: HeroSection
+  className?: string
+  floating?: boolean
+}
+
+const HeroSection: FunctionComponent<HeroSectionProps> = ({
+  data,
+  className,
+  floating,
+}) => {
   const [show, setShow] = useState<boolean>(false)
+  const [background, setBackground] = useState<string>('var(--primary-color)')
+
+  const heroClasses = classnames(styles.hero, {
+    [className as string]: className,
+  })
+
+  const heroContentClasses = classnames(styles.hero__content, {
+    [styles.hero__content_floating]: floating,
+  })
+
+  useEffect(() => {
+    data.image && setBackground(`url(${data.image}) no-repeat`)
+  }, [data.image])
   return (
-    <section className={styles.hero}>
-      <div className={styles.hero__wrapper}>
-        <div className={styles.hero__content}>
-          <h1 className={styles.hero__title}>Industries and sectors</h1>
-          <p className={styles.hero__text}>
-            Our industry-focused network is designed to anticipate and address
-            your business needs. Together, our 250,000 people, deployed across
-            158 countries, can both zoom out and see the big picture — the
-            context — and zoom in on the right solution.
-          </p>
+    <section
+      className={heroClasses}
+      style={{
+        background,
+      }}
+    >
+      <div className={heroContentClasses}>
+        <h1 className={styles.hero__title}>{data.title}</h1>
+        {data['sub-title'] && (
+          <h2 className={styles.hero__subtitle}>{data['sub-title']}</h2>
+        )}
+        {data.text && <p className={styles.hero__text}>{data.text}</p>}
+        {data['short-url'] && (
           <div className={styles.hero__link}>
             <button onClick={() => setShow(true)}>
               <span>
@@ -23,14 +51,14 @@ const HeroSection = () => {
               </span>
               <div className={styles.hero__link_copy}>
                 <CopyBox
-                  link='https://pwc.to/2wCRx0e'
+                  link={data['short-url']}
                   show={show}
                   setShow={setShow}
                 />
               </div>
             </button>
           </div>
-        </div>
+        )}
       </div>
     </section>
   )

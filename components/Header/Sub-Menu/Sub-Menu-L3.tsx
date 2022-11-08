@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import classNames from 'classnames'
 import styles from './Sub-Menu.module.scss'
-import { MenuItem } from '../../../types/Menu'
-import { HeaderContext } from '../../../context/Header-Context'
-import { NavBackButton } from '../../ui'
+import { MenuItem } from '@customTypes/Menu'
+import { HeaderContext } from '@context/Header-Context'
+import { NavBackButton } from '@components/ui'
 
 interface SubMenuLevelThreeProps {
   subMenuContent: MenuItem[]

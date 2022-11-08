@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useEffect, useState } from 'react'
 import styles from './Accordion.module.scss'
 import AccordionItem from './Accordion-Item/Accordion-Item'
-import { MenuItem } from '../../types/Menu'
+import { MenuItem } from '@customTypes/Menu'
 
 interface AccordionProps {
   menu: MenuItem[]

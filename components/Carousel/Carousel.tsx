@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { FunctionComponent, useEffect, useState } from 'react'
+import React, { FunctionComponent, useState } from 'react'
 import styles from './Carousel.module.scss'
 import { ThickLongRightArrow } from '../icons'
-import data from '../../demo-data/carousel.json'
+import data from '@data/carousel.json'
 import classNames from 'classnames'
 
 const Carousel: FunctionComponent = () => {
@@ -39,7 +39,7 @@ const Carousel: FunctionComponent = () => {
               className={`${styles.carousel__pane} ${
                 index === currentSlide ? styles.carousel__pane_active : ''
               }`}
-              style={{ backgroundImage: `url(/images/${slide.image})` }}
+              style={{ backgroundImage: `url(${slide.image})` }}
             >
               <div className={styles.carousel__data}>
                 <div className={styles.carousel__data_wrapper}>

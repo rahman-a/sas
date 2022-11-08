@@ -50,6 +50,7 @@
     padding: 1rem;
     cursor: pointer;
     word-wrap: break-word;
+    margin-bottom: 1rem;
     font: var(--title-text-regular);
     &:not(&_active):hover {
       background-color: var(--primary-color-light);
@@ -70,6 +71,11 @@
   &__title {
     margin-bottom: 2rem;
     font: var(--title-text-large-medium);
+  }
+
+  &__btn {
+    margin-top: 3.5rem;
+    width: fit-content;
   }
 
   &__separator {

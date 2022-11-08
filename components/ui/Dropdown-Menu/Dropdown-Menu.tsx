@@ -1,51 +1,7 @@
 import React, { FunctionComponent, useEffect, useState } from 'react'
 import styles from './Dropdown-Menu.module.scss'
-import { v4 as uuidv4 } from 'uuid'
 import Link from 'next/link'
-import { territoriesListItem } from '../../../types/Territories-Menu'
-
-// const listItems = [
-//   { _id: uuidv4(), text: 'Global', link: '/global' },
-//   { _id: uuidv4(), text: 'Afrique Francophone', link: '/afr-fran' },
-//   { _id: uuidv4(), text: 'Albania', link: '/albania' },
-//   { _id: uuidv4(), text: 'America', link: '/america' },
-//   { _id: uuidv4(), text: 'Andorra', link: '/andorra' },
-//   { _id: uuidv4(), text: 'Argentina', link: '/argentina' },
-//   { _id: uuidv4(), text: 'Armenia', link: '/armenia' },
-//   { _id: uuidv4(), text: 'Australia', link: '/australia' },
-//   { _id: uuidv4(), text: 'Austria', link: '/austria' },
-//   { _id: uuidv4(), text: 'Azerbaijan', link: '/azerbaijan' },
-//   { _id: uuidv4(), text: 'Bahamas', link: '/bahamas' },
-//   { _id: uuidv4(), text: 'Bahrain', link: '/bahrain' },
-//   { _id: uuidv4(), text: 'Barbados', link: '/barbados' },
-//   { _id: uuidv4(), text: 'Belgium', link: '/belgium' },
-//   { _id: uuidv4(), text: 'België', link: '/belgië' },
-//   { _id: uuidv4(), text: 'Bermuda', link: '/global' },
-//   { _id: uuidv4(), text: 'Bolivia', link: '/global' },
-//   { _id: uuidv4(), text: 'Bosnia and Herzegovina', link: '/global' },
-//   { _id: uuidv4(), text: 'Botswana', link: '/global' },
-//   { _id: uuidv4(), text: 'Brasil', link: '/global' },
-//   { _id: uuidv4(), text: 'British Virgin Islands', link: '/global' },
-//   { _id: uuidv4(), text: 'Brunei', link: '/global' },
-//   { _id: uuidv4(), text: 'Bulgaria', link: '/global' },
-//   { _id: uuidv4(), text: 'Cambodia', link: '/global' },
-//   { _id: uuidv4(), text: 'Canada', link: '/global' },
-//   { _id: uuidv4(), text: 'Cape Verde', link: '/global' },
-//   { _id: uuidv4(), text: 'Caribbean', link: '/global' },
-//   { _id: uuidv4(), text: 'Cayman Islands', link: '/global' },
-//   { _id: uuidv4(), text: 'Central and Eastern Europe', link: '/global' },
-//   { _id: uuidv4(), text: 'Chad', link: '/global' },
-//   { _id: uuidv4(), text: 'Channel Islands', link: '/global' },
-//   { _id: uuidv4(), text: 'Chile', link: '/global' },
-//   { _id: uuidv4(), text: 'Colombia', link: '/global' },
-//   { _id: uuidv4(), text: 'Congo (Brazzaville)', link: '/global' },
-//   { _id: uuidv4(), text: 'Congo (Dem. Rep.)', link: '/global' },
-//   { _id: uuidv4(), text: 'Costa Rica', link: '/global' },
-//   { _id: uuidv4(), text: 'Croatia', link: '/global' },
-//   { _id: uuidv4(), text: 'Cyprus', link: '/global' },
-//   { _id: uuidv4(), text: 'Czech Republic', link: '/global' },
-//   { _id: uuidv4(), text: "Côte d'Ivoire", link: '/global' },
-// ]
+import { territoriesListItem } from '@customTypes/Territories-Menu'
 
 type listItems = {
   list: territoriesListItem[]

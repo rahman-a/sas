@@ -1,6 +1,10 @@
-11/10/2022
-- create image-card
-- create tabbed interface
-- create different button variant
-- implement buttons with details section
-- create industry item page
+- create the header which consist of logo, menu, search, territories dropdown menu and featured news
+- create breadcrumbs to make navigation easy for user
+////////////////////////////////////////
+- finish the development of breaknews section
+//////////////////////////////////////////
+- finish all services page
+- finish creating all button variants
+- implement button component in details section components
+- finish creating the tapped interface component
+- finish creating feature card component

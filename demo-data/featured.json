@@ -3,19 +3,19 @@
         {
             "_id": "5dca7693cc74d8f2135fc76c1d7be598",
             "text": "Global Consumer Insights Pulse Survey - June 2022",
-            "image": "teaser-final.jpg",
+            "image": "/images/teaser-final.jpg",
             "link": "/industries/consumer-markets/consumer-insights-survey"
         },
         {
             "_id": "8b7071ba71bce7eef7cce9b8c7d5f461",
             "text": "Achieving net zero infrastructure",
-            "image": "solar-teaser.jpg",
+            "image": "/images/solar-teaser.jpg",
             "link": "/industries/capital-projects-infrastructure/publications/achieving-net-zero-infrastructure"
         },
         {
             "_id": "f07ba4ab6fee1d40a72c8b032f1c0e22",
             "text": "Manufacturing COO Pulse Survey",
-            "image": "im-hero.jpg",
+            "image": "/images/im-hero.jpg",
             "link": "/industries/industrial-manufacturing/coo-pulse-survey"
         }
     ],
@@ -23,19 +23,19 @@
         {
             "_id": "a082c3b6df6e89ea5262095a85a11b4e",
             "text": "Ukraine: Tax, Legal and People considerations",
-            "image": "pink-tile.jpg",
+            "image": "/images/pink-tile.jpg",
             "link": "/services/tax/tax-legal-people-considerations-ukraine-russia"
         },
         {
             "_id": "9dd2f7b4faa28de5c8baea2ad7156f6e",
             "text": "Digital Trust Insights Survey 2022",
-            "image": "pulse-survey.jpg",
+            "image": "/images/pulse-survey.jpg",
             "link": "/issues/cybersecurity/digital-trust-insights-2021"
         },
         {
             "_id": "39bfaae78ef9793237c293084bef984c",
             "text": "M&A industry trends report",
-            "image": "teaser-image.jpg",
+            "image": "/images/teaser-image.jpg",
             "link": "/services/deals/trends"
         }
     ],
@@ -43,19 +43,19 @@
         {
             "_id": "594354abfe6ccc73c9ca2105482ceff6",
             "text": "The Leadership Agenda",
-            "image": "ID-30_883px.png",
+            "image": "/images/ID-30_883px.png",
             "link": "/issues/the-leadership-agenda"
         },
         {
             "_id": "a1f88ac9fca179b53bbc83a3cc115378",
             "text": "Take on Tomorrow: a strategy+business podcast",
-            "image": "sb-tot-670x377.jpg",
+            "image": "/images/sb-tot-670x377.jpg",
             "link": "/issues/reinventing-the-future/take-on-tomorrow"
         },
         {
             "_id": "e67d48b4951ea49f2602dba296b79aeb",
             "text": "strategy+business digital issue",
-            "image": "s+b-uncover-hidden-levers.jpg",
+            "image": "/images/s+b-uncover-hidden-levers.jpg",
             "link": "/ghost/strategy-business-digital-issue"
         }
     ],
@@ -63,19 +63,19 @@
         {
             "_id": "3ac5af525a173322668091cc6f38ccae",
             "text": "The New Equation",
-            "image": "tne_featured_nav.jpg",
+            "image": "/images/tne_featured_nav.jpg",
             "link": "/about/the-new-equation"
         },
         {
             "_id": "9fe63ef85f8c96547c4c65a2c7f5de66",
             "text": "PwC's Global Annual Review",
-            "image": "gar-landing-thumbnail.jpg",
+            "image": "/images/gar-landing-thumbnail.jpg",
             "link": "/about/global-annual-review-2021"
         },
         {
             "_id": "b3c626dbbb31dc466bb1b82c5ab6d73a",
             "text": "Committing to Net Zero by 2030",
-            "image": "net-zero.jpg",
+            "image": "/images/net-zero.jpg",
             "link": "/about/net-zero"
         }
     ],
@@ -83,7 +83,7 @@
         {
             "_id": "b498de58fd1b3efee393a1c44002e5be",
             "text": "24th Annual Global CEO Survey",
-            "image": "CEO_2021_Thumbnail_main.jpg",
+            "image": "/images/CEO_2021_Thumbnail_main.jpg",
             "link": "/ceo-agenda/ceosurvey/2021"
         }
     ]

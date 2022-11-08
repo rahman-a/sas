@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React, { forwardRef } from 'react'
 import styles from './Nav-Back-Button.module.scss'
-import { LeftArrow } from '../../icons'
+import { LeftArrow } from '@components/icons'
 
 interface NavBackButtonProps {
   text: string

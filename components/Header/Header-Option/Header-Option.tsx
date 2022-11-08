@@ -1,11 +1,11 @@
-import React, { FunctionComponent, useContext, useState } from 'react'
+import React, { FunctionComponent, useContext } from 'react'
 import classnames from 'classnames'
 import styles from './Header-Option.module.scss'
-import { Magnifier } from '../../icons'
-import { HeaderContext } from '../../../context/Header-Context'
+import { Magnifier } from '@components/icons'
+import { HeaderContext } from '@context/Header-Context'
 import Locations from '../Locations/Locations'
-import { Hamburger } from '../../ui'
-import locations from '../../../demo-data/territories.json'
+import { Hamburger } from '@components/ui'
+import locations from '@data/territories.json'
 
 const HeaderOption: FunctionComponent = () => {
   const {

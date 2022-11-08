@@ -1,17 +1,17 @@
-import { createContext, useState } from 'react'
-import { Menu } from '../types/Menu'
+import { createContext, useState, Dispatch } from 'react'
+import { Menu } from '@customTypes/Menu'
 
 interface HeaderContextProps {
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+  setIsOpen: Dispatch<React.SetStateAction<boolean>>
   isOpen: boolean
   isDropdownOpen: boolean
-  setIsDropdownOpen: React.Dispatch<React.SetStateAction<boolean>>
-  setSubNavType: React.Dispatch<React.SetStateAction<string>>
+  setIsDropdownOpen: Dispatch<React.SetStateAction<boolean>>
+  setSubNavType: Dispatch<React.SetStateAction<string>>
   subNavType: string
   subMenuLevel: number
-  setSubMenuLevel: React.Dispatch<React.SetStateAction<number>>
+  setSubMenuLevel: Dispatch<React.SetStateAction<number>>
   menu: Menu
-  setMenu: React.Dispatch<React.SetStateAction<Menu>>
+  setMenu: Dispatch<React.SetStateAction<Menu>>
 }
 
 interface HeaderContextProviderProps {

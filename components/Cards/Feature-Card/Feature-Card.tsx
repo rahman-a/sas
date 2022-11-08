@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import styles from './Feature-Card.module.scss'
-import { FeatureCard } from '../../../types/Section'
+import { FeatureCard } from '@customTypes/Section'
 
 interface FeatureCardProps {
   card: FeatureCard

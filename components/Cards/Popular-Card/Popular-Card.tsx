@@ -1,19 +1,23 @@
 import React, { FunctionComponent } from 'react'
 import Image from 'next/image'
 import styles from './Popular-Card.module.scss'
-import { Card } from '../../../types/Section'
+import { Card } from '@customTypes/Section'
 
 interface PopularCardProps {
   card: Card
+  className?: string
 }
 
-const PopularCard: FunctionComponent<PopularCardProps> = ({ card }) => {
+const PopularCard: FunctionComponent<PopularCardProps> = ({
+  card,
+  className,
+}) => {
   return (
-    <article className={styles.card}>
+    <article className={`${styles.card} ${className ? className : ''}`}>
       <a href={card.link} className={styles.card__wrapper}>
         <figure className={styles.card__figure}>
           <Image
-            src={`/images/${card.image}`}
+            src={card.image}
             alt='Dam'
             width={300}
             height={200}

@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useContext } from 'react'
-import Image from 'next/image'
+import React from 'react'
 import styles from './Search-Result.module.scss'
 
 const SearchResult = () => {

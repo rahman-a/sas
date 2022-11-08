@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import styles from './Nav-Overlay.module.scss'
-import { HeaderContext } from '../../../context/Header-Context'
-import { Close } from '../../icons'
+import { HeaderContext } from '@context/Header-Context'
+import { Close } from '@components/icons'
 import classNames from 'classnames'
 
 type NavOverlayProps = {

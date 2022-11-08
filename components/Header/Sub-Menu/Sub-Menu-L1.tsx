@@ -3,7 +3,7 @@ import styles from './Sub-Menu.module.scss'
 import Navbar from '../Navbar/Navbar'
 import classNames from 'classnames'
 import Locations from '../Locations/Locations'
-import locations from '../../../demo-data/territories.json'
+import locations from '@data/territories.json'
 
 interface SubMenuLevelOneProps {
   submenuLevel: number

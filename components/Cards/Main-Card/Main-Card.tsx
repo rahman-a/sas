@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react'
 import Image from 'next/image'
 import styles from './Main-Card.module.scss'
-import { ThickLongRightArrow } from '../../icons'
-import { Card } from '../../../types/Section'
+import { ThickLongRightArrow } from '@components/icons'
+import { Card } from '@customTypes/Section'
 interface MainCardProps {
   card: Card
 }
@@ -13,7 +13,7 @@ const MainCard: FunctionComponent<MainCardProps> = ({ card }) => {
       <a href={card.link} className={styles.card__wrapper}>
         <figure className={styles.card__figure}>
           <Image
-            src={`/images/${card.image}`}
+            src={card.image}
             alt='Dam'
             width={300}
             height={200}

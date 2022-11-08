@@ -1,7 +1,8 @@
 import React, { FunctionComponent, useEffect, useState } from 'react'
 import styles from './Tabbed-Interface.module.scss'
 import parser from 'html-react-parser'
-import { TabbedInterface } from '../../types/Tabbed'
+import { TabbedInterface } from '@customTypes/Tabbed'
+import { Button } from '../ui'
 
 interface TabbedInterfaceProps {
   tabs: TabbedInterface[]
@@ -47,6 +48,17 @@ const TabbedInterface: FunctionComponent<TabbedInterfaceProps> = ({
         <div className={styles.tab__col}>
           <h3 className={styles.tab__title}>{tabData?.title}</h3>
           {tabData?.text && parser(tabData.text)}
+          {tabData?.btn && (
+            <Button
+              variant='gray-outlined'
+              icon
+              as='a'
+              href={tabData.link}
+              className={styles.tab__btn}
+            >
+              {tabData.btn}
+            </Button>
+          )}
         </div>
       </div>
     </div>

@@ -8,19 +8,23 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": "./",
+    "paths": {
+      "@components": ["components"],
+      "@components/*": ["components/*"],
+      "@styles/*": ["styles/*"],
+      "@context/*": ["context/*"],
+      "@customTypes/*": ["types/*"],
+      "@data/*": ["demo-data/*"],
+      "@hooks": ["hooks"]
+    }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "components/Header/Header.jsx",
-    "demo.js"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "test.js"],
   "exclude": ["node_modules"]
 }

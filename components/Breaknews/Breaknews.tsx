@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from 'react'
 import styles from './Breaknews.module.scss'
-import { RightArrow } from '../icons'
 import { Button } from '../ui'
 
 const BreakNews: FunctionComponent = () => {

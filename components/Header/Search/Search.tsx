@@ -1,4 +1,5 @@
 import React, {
+  FunctionComponent,
   FormEvent,
   useEffect,
   useRef,
@@ -7,12 +8,12 @@ import React, {
 } from 'react'
 import { RotatingLines } from 'react-loader-spinner'
 import styles from './Search.module.scss'
-import { Magnifier } from '../../icons'
+import { Magnifier } from '@components/icons'
 import SearchResult from '../Search-Result/Search-Result'
-import { HeaderContext } from '../../../context/Header-Context'
+import { HeaderContext } from '@context/Header-Context'
 import classNames from 'classnames'
 
-const Search: React.FC = () => {
+const Search: FunctionComponent = () => {
   const { isOpen } = useContext(HeaderContext)
   const [searchTerm, setSearchTerm] = useState<string>('')
   const searchRef = useRef<HTMLFormElement>(null)

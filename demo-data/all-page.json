@@ -30,7 +30,7 @@
         "description": "<p>It all adds up to The New Equation.</p>",
         "link": "/the-new-equation",
         "text": "See how The New Equation can solve for you",
-        "image": "tne-site-promo.webp",
+        "image": "/images/tne-site-promo.webp",
         "reverse": true
     }
 }

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { HeaderContext } from '../../../context/Header-Context'
+import { HeaderContext } from '@context/Header-Context'
 import NavOverlay from '../Nav-Overlay/Nav-Overlay'
 import Search from '../Search/Search'
 import SubMenu from '../Sub-Menu/Sub-Menu'

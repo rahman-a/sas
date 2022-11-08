@@ -3,25 +3,25 @@
         {
             "_id": "669349065d3c408ae72c138fb67f6d88",
             "name": "Twitter",
-            "image": "follow_twitter.webp",
+            "image": "/images/social/follow_twitter.webp",
             "url": "https://twitter.com/yourname"
         },
         {
             "_id": "5525ba827e0ed36daaf39b0b6242c6a4",
             "name": "Facebook",
-            "image": "follow_facebook.gif",
+            "image": "/images/social/follow_facebook.gif",
             "url": "https://www.facebook.com/yourname"
         },
         {
             "_id": "ce44061b62f128f30d1765edb194406a",
             "name": "LinkedIn",
-            "image": "follow_linkedin.png",
+            "image": "/images/social/follow_linkedin.png",
             "url": "https://www.linkedin.com/in/yourname"
         },
         {
             "_id": "06fbf5abe8d2868dea90ae0f0c9faa70",
             "name": "Youtube",
-            "image": "follow_youtube.webp",
+            "image": "/images/social/follow_youtube.webp",
             "url": "https://www.youtube.com/yourname"
         }
     ]

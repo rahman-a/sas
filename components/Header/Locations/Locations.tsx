@@ -1,11 +1,10 @@
-import { SyntheticEvent, useContext, useEffect, useRef } from 'react'
+import { SyntheticEvent, useContext, FunctionComponent, useRef } from 'react'
 import classnames from 'classnames'
 import styles from './Locations.module.scss'
-import React, { FunctionComponent, useState } from 'react'
 import { DownArrow, LocationSymbol } from '../../icons'
-import { DropdownMenu } from '../../ui'
-import { HeaderContext } from '../../../context/Header-Context'
-import { territoriesListItem } from '../../../types/Territories-Menu'
+import { DropdownMenu } from '@components/ui'
+import { HeaderContext } from '@context/Header-Context'
+import { territoriesListItem } from '@customTypes/Territories-Menu'
 
 interface LocationsProps {
   list: territoriesListItem[]

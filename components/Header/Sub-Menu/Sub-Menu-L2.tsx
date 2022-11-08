@@ -3,9 +3,9 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styles from './Sub-Menu.module.scss'
 import classNames from 'classnames'
-import { MenuItem } from '../../../types/Menu'
-import { RightArrow } from '../../icons'
-import { NavBackButton } from '../../ui'
+import { MenuItem } from '@customTypes/Menu'
+import { RightArrow } from '@components/icons'
+import { NavBackButton } from '@components/ui'
 
 interface SubMenuLevel2Props {
   subMenuContent: MenuItem[]

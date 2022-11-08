@@ -5,7 +5,7 @@ import classnames from 'classnames'
 import { v4 as uuidv4 } from 'uuid'
 import 'simplebar/dist/simplebar.min.css'
 import styles from './Breadcrumbs.module.scss'
-import { Home } from '../../icons'
+import { Home } from '@components/icons'
 import Link from 'next/link'
 
 interface BreadcrumbsProps {
@@ -41,7 +41,7 @@ const Breadcrumbs: FunctionComponent<BreadcrumbsProps> = ({ isOpen }) => {
       // by joining together the path parts up to this point.
       const href = '/' + asPathNestedRoutes.slice(0, idx + 1).join('/')
       // The title will just be the route string for now
-      const title = subpath
+      const title = subpath.split('-').join(' ')
       return { _id: uuidv4(), href, title }
     })
 

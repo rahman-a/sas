@@ -9,8 +9,8 @@ import styles from '../Accordion.module.scss'
 import classnames from 'classnames'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { RightArrow } from '../../icons'
-import { MenuItem } from '../../../types/Menu'
+import { RightArrow } from '@components/icons'
+import { MenuItem } from '@customTypes/Menu'
 
 interface AccordionItemProps {
   item: MenuItem
@@ -24,7 +24,6 @@ const AccordionItem: FunctionComponent<AccordionItemProps> = ({ item }) => {
 
   const toggleAccordionHandler = useCallback(
     (e: React.SyntheticEvent) => {
-      e.preventDefault()
       if (!item.submenu) {
         router.push(item.link)
         return
@@ -46,7 +45,7 @@ const AccordionItem: FunctionComponent<AccordionItemProps> = ({ item }) => {
   )
 
   const contentHeader = classnames(
-    styles.accordion__header,
+    styles.accordion__content_link,
     styles.accordion__content_header
   )
   const contentTitle = classnames(
@@ -60,19 +59,24 @@ const AccordionItem: FunctionComponent<AccordionItemProps> = ({ item }) => {
 
   return (
     <div className={styles.accordion__item}>
-      <Link href={item.link}>
-        <a
-          className={styles.accordion__header}
-          onClick={toggleAccordionHandler}
-        >
-          <h2 className={styles.accordion__title}>{item.text}</h2>
-          {item.submenu && (
-            <span className={iconClasses}>
-              <RightArrow />
-            </span>
-          )}
-        </a>
-      </Link>
+      <div
+        className={styles.accordion__header}
+        onClick={toggleAccordionHandler}
+      >
+        <Link href={item.link}>
+          <a
+            className={styles.accordion__link}
+            onClick={(e) => e.preventDefault()}
+          >
+            <h2 className={styles.accordion__title}>{item.text}</h2>
+            {item.submenu && (
+              <span className={iconClasses}>
+                <RightArrow />
+              </span>
+            )}
+          </a>
+        </Link>
+      </div>
       {item.submenu && (
         <div className={styles.accordion__content} ref={contentRef}>
           <div

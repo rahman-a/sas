@@ -1,20 +1,26 @@
 import React, { FunctionComponent } from 'react'
 import classnames from 'classnames'
 import styles from './Button.module.scss'
-import { RightArrow, LongRightArrow, ThickLongRightArrow } from '../../icons'
-import { ButtonType } from '../../../types/Button'
+import { ButtonType } from '@customTypes/Button'
+import ButtonIcon from './Button-Icon'
 
-const Button: FunctionComponent<ButtonType> = ({
-  variant,
-  className,
-  children,
-  style,
-  icon,
-  disabled,
-  onClick,
-  as,
-  href,
-}) => {
+const Button: FunctionComponent<ButtonType> = (
+  {
+    variant,
+    className,
+    children,
+    style,
+    type,
+    icon,
+    disabled,
+    onClick,
+    rounded,
+    as,
+    href,
+    dataAttributes,
+  },
+  props
+) => {
   const btnClasses = classnames(styles.btn, {
     [styles['btn__dark-primary']]: variant === 'dark-primary',
     [styles['btn__dark-white']]: variant === 'dark-white',
@@ -22,6 +28,7 @@ const Button: FunctionComponent<ButtonType> = ({
     [styles['btn__outlined']]: variant === 'primary-outlined',
     [styles['btn__secondary-outlined']]: variant === 'secondary-outlined',
     [styles['btn__gray-outlined']]: variant === 'gray-outlined',
+    [styles['btn__rounded']]: rounded,
     [styles['btn__text']]: variant === 'text',
     [styles['btn__wide']]: icon,
     [styles['btn__disabled-text']]: variant === 'text' && disabled,
@@ -30,28 +37,18 @@ const Button: FunctionComponent<ButtonType> = ({
   })
   const AsComponent = as ?? 'button'
   return (
-    <div className={styles.demo}>
-      <AsComponent
-        href={href}
-        onClick={onClick}
-        className={btnClasses}
-        style={style}
-        disabled={disabled}
-      >
-        {children}
-        {icon && (
-          <span className={styles.btn__icon}>
-            {icon === 'arrow' ? (
-              <LongRightArrow />
-            ) : icon === 'thick-arrow' ? (
-              <ThickLongRightArrow />
-            ) : (
-              <RightArrow />
-            )}
-          </span>
-        )}
-      </AsComponent>
-    </div>
+    <AsComponent
+      href={href}
+      onClick={onClick}
+      className={btnClasses}
+      style={style}
+      disabled={disabled}
+      type={type}
+      {...dataAttributes}
+    >
+      {children}
+      {icon && <ButtonIcon icon={icon} />}
+    </AsComponent>
   )
 }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import styles from './Hamburger.module.scss'
 import classnames from 'classnames'
 
@@ -7,7 +7,10 @@ interface HamburgerProps {
   toggleHandler: () => void
 }
 
-const Hamburger: React.FC<HamburgerProps> = ({ isOpen, toggleHandler }) => {
+const Hamburger: FunctionComponent<HamburgerProps> = ({
+  isOpen,
+  toggleHandler,
+}) => {
   const hamburgerClasses = classnames(styles.hamburger, {
     [styles['hamburger__is-open']]: isOpen,
   })

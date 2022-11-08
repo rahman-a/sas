@@ -1,7 +1,7 @@
 @use '../../../styles/media' as media;
 
 .section {
-  padding: 10rem 0;
+  padding: 5rem 0;
   @include media.breakpoint(md) {
     padding: 5rem 0;
   }

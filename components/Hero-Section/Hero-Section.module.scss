@@ -2,8 +2,6 @@
 
 .hero {
   position: relative;
-  background: url(../../public/images/industries-hero.jpg) no-repeat center
-    center/cover;
   height: 45rem;
   color: var(--primary-text-color-light);
   @include media.breakpoint(xs) {
@@ -25,6 +23,13 @@
     }
     @include media.breakpoint(xs) {
       padding: 2rem;
+    }
+
+    &_floating {
+      bottom: 2rem;
+      left: 5rem;
+      width: 55%;
+      padding: 1rem;
     }
   }
 

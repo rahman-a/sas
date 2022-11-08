@@ -60,29 +60,40 @@ $white-color: #fff;
     var(--secondary-font-regular);
 
   // COLORS VARIABLES
-  --primary-color: #1e95e0;
-  --primary-color-light: #c9ecfc;
-  --primary-color-dark: #002638;
+  --primary-color: rgb(30, 149, 224);
+  --primary-color-light: rgb(201, 236, 252);
+  --primary-color-dark: rgb(0, 38, 56);
 
-  --primary-text-color: #2d2d2d;
-  --primary-text-color-light: #ffffff;
-  --primary-text-color-dark: #000000;
+  --primary-text-color: rgb(45, 45, 45);
+  --primary-text-color-light: rgb(255, 255, 255);
+  --primary-text-color-dark: rgb(0, 0, 0);
 
-  --surface-color: #394155;
-  --background-color: #f2f2f2;
-  --background-color-dark: #dedede;
-  --container-color: #2d2d2d;
+  --surface-color: rgb(57, 65, 85);
+  --background-color: rgb(242, 242, 242);
+  --background-color-dark: rgb(222, 222, 222);
+  --gray-color: rgb(125, 125, 125);
+  --gray-color-20: rgba(125, 125, 125, 0.2);
+  --gray-color-40: rgba(125, 125, 125, 0.4);
+  --gray-color-60: rgba(125, 125, 125, 0.6);
+  --gray-color-80: rgba(125, 125, 125, 0.8);
+  --container-color: rgb(45, 45, 45);
   --container-color-20: rgba(45, 45, 45, 0.2);
   --container-color-40: rgba(45, 45, 45, 0.4);
   --container-color-60: rgba(45, 45, 45, 0.6);
   --container-color-80: rgba(45, 45, 45, 0.8);
 
-  --white-color: #fff;
+  --white-color: rgb(255, 255, 255);
   --white-color-20: rgba(255, 255, 255, 0.2);
   --white-color-40: rgba(255, 255, 255, 0.4);
   --white-color-60: rgba(255, 255, 255, 0.6);
   --white-color-80: rgba(255, 255, 255, 0.8);
-  --black-color: #000;
+  --black-color: rgb(0, 0, 0);
+
+  --error-color: rgb(224, 48, 30);
+  --error-container-color: rgb(255, 199, 199);
+
+  --success-color: rgb(17, 115, 92);
+  --success-container-color: rgb(199, 255, 213);
 }
 
 html {
@@ -135,4 +146,19 @@ body {
 
 .is-hidden {
   display: none !important;
+}
+
+#hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.table__title {
+  background-color: var(--gray-color-20);
+  border-left: 2px solid var(--primary-color);
+  p {
+    font-size: 1.6rem;
+    color: var(--primary-color-dark);
+    letter-spacing: 0.5px;
+  }
 }

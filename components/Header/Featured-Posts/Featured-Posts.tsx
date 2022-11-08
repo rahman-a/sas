@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useContext, useRef } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import styles from './Featured-Posts.module.scss'
 import FeaturedPost from './Featured-Post'
-import featuredPostsList from '../../../demo-data/featured.json'
-import { HeaderContext } from '../../../context/Header-Context'
-import { Post } from '../../../types/Featured'
+import featuredPostsList from '@data/featured.json'
+import { HeaderContext } from '@context/Header-Context'
+import { Post } from '@customTypes/Featured'
 
 const FeaturedPosts = () => {
   const [posts, setPosts] = useState<Post[]>([])

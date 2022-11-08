@@ -2,8 +2,8 @@ import React, { useState, useContext, useEffect } from 'react'
 import classNames from 'classnames'
 import { v4 as uuidv4 } from 'uuid'
 import styles from './Navbar.module.scss'
-import { HeaderContext } from '../../../context/Header-Context'
-import { RightArrow } from '../../icons'
+import { HeaderContext } from '@context/Header-Context'
+import { RightArrow } from '@components/icons'
 
 interface MenuItem {
   _id: string

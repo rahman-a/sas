@@ -1,6 +1,6 @@
 @use '../../../styles/media' as media;
 .cards {
-  h3 {
+  & > h3 {
     margin-left: 2rem;
     margin-bottom: 1rem;
     @include media.breakpoint(md) {

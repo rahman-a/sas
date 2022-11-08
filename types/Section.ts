@@ -24,7 +24,7 @@ export interface FeatureCard {
 export interface Details {
   _id: string
   title: string
-  'sub-title': string
+  'sub-title'?: string
   description: string
   image: string
   reverse?: boolean

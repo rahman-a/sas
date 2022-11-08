@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './Social-Media.module.scss'
-import socialData from '../../demo-data/social.json'
+import socialData from '@data/social.json'
 
 interface Social {
   _id: string
@@ -22,7 +22,7 @@ const SocialMedia = () => {
                 <Image
                   width={25}
                   height={25}
-                  src={`/images/social/${item.image}`}
+                  src={item.image}
                   alt={item.name}
                   layout='fixed'
                 />

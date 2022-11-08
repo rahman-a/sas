@@ -101,6 +101,10 @@
     }
   }
 
+  &__rounded {
+    border-radius: 3rem;
+  }
+
   &__disabled {
     background-color: var(--container-color-20);
     border: 0;

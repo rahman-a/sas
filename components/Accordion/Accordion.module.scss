@@ -21,16 +21,19 @@
     }
   }
   &__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-decoration: none;
     padding: 1rem;
     border: 1px solid var(--background-color-dark);
     cursor: pointer;
     &:hover {
       background-color: var(--primary-color);
     }
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__title {
@@ -68,6 +71,17 @@
     &_wrapper {
       position: absolute;
       width: 100%;
+    }
+    &_link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      padding: 1rem;
+      border: 1px solid var(--background-color-dark);
+      &:hover {
+        background-color: var(--primary-color);
+      }
     }
     &_header {
       width: 100%;

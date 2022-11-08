@@ -1,6 +1,6 @@
-@use '../../styles/media' as media;
+@use '@styles/media' as media;
 
-.venture {
+.services {
   &__title {
     font: var(--title-text-large-medium);
     color: var(--primary-color);
