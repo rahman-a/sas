@@ -23,7 +23,7 @@ const tileData = {
   title: 'Contact us',
   description: 'About privacy and legal issues',
   icon: '/images/icons/icon_write.webp',
-  link: '/legal-notices/contact-form',
+  link: '/legal-notices/privacy-policy#contact',
 }
 
 const LegalNotices = () => {

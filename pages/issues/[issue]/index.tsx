@@ -14,7 +14,13 @@ import { HeroSection as HeroSectionType } from '@customTypes/Hero-Section'
 import issuesData from '@data/issue-sections.json'
 import filterData from '@data/filtered-list.json'
 import staffData from '@data/staff.json'
+import staticPaths from '@data/static-paths.json'
 import { Button } from '@components/ui'
+import { GetStaticPaths, GetStaticProps } from 'next'
+
+interface StaticParams {
+  issue: string | string[] | undefined
+}
 
 const Issue = () => {
   const [heroSection, setHeroSection] = useState<HeroSectionType>(
@@ -73,6 +79,29 @@ const Issue = () => {
       </FloatContainer>
     </div>
   )
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = staticPaths.issues.map((item) => ({
+    params: {
+      issue: item.page,
+    },
+  }))
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export const getStaticProps: GetStaticProps<StaticParams> = async ({
+  params,
+}) => {
+  const issue = params?.issue
+  return {
+    props: {
+      issue,
+    },
+  }
 }
 
 export default Issue

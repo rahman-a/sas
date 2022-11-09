@@ -22,21 +22,21 @@
                 "title": "Time to get serious about climate risk",
                 "text": "Many companies overlook the pressing, often surprising, array of climate risks they face.",
                 "image": "/images/page-thumbnail-c-suite.webp",
-                "url": "/services/sustainability/publications/risks-and-opportunities-of-climate-change-on-business"
+                "url": "#"
             },
             {
                 "_id": "d55492ac34ec5b637402247265720264",
                 "title": "State of Climate Tech 2021",
                 "text": "Investors are securing both climate impact and commercial returns from climate tech.",
                 "image": "/images/state-of-climate-tech-hero-670x377-v3.webp",
-                "url": "/services/sustainability/publications/state-of-climate-tech"
+                "url": "#"
             },
             {
                 "_id": "945e207f72e84ff02a3eeafc31320740",
                 "title": "Green Taxes and Incentives Tracker",
                 "text": "Green taxes, green cash grants and green tax incentives are increasing.",
                 "image": "/images/thumbnail-living-wall.webp",
-                "url": "/services/tax/green-tax-and-incentives-tracker"
+                "url": "#"
             }
         ]
     }

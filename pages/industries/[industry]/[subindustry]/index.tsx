@@ -40,10 +40,10 @@ const secondSectionData = {
 }
 
 interface StaticParams {
-  industry: string | string[] | undefined
+  subindustry: string | string[] | undefined
 }
 
-const Industry = () => {
+const SubIndustry = () => {
   const [heroSection, setHeroSection] = useState<HeroSectionType>(
     heroData['industry']
   )
@@ -104,11 +104,15 @@ const Industry = () => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = staticPaths.industries.map((item) => ({
-    params: {
-      industry: item.page,
-    },
-  }))
+  const paths = staticPaths['sub-industries'].map((item) => {
+    const page = item.page.split('/')
+    return {
+      params: {
+        industry: page[0],
+        subindustry: page[1],
+      },
+    }
+  })
   return {
     paths,
     fallback: false,
@@ -118,12 +122,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<StaticParams> = async ({
   params,
 }) => {
-  const industry = params?.industry
+  const subindustry = params?.subindustry
   return {
     props: {
-      industry,
+      subindustry,
     },
   }
 }
 
-export default Industry
+export default SubIndustry

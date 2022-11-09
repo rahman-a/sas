@@ -29,9 +29,9 @@ const firstSectionsData = {
     '<p>A crisis situation can disrupt operations, damage reputations, destroy shareholder value, and trigger other threats. As the business community has learned through the COVID-19 pandemic, it’s more important than ever for leaders to anticipate and plan for the possibility of an unplanned event. The more prepared you are to manage shocks, the less likely you’ll fall victim to serious harm, and you gain the muscle memory to build resilience for future threats.</p>',
   quote: {
     content:
-      'PwC’s Alliances and Ecosystems curate the technology, data and third party relationships that are central to delivering The New Equation - powering innovation and change to create sustained outcomes.',
+      "SAS's Alliances and Ecosystems curate the technology, data and third party relationships that are central to delivering The New Equation - powering innovation and change to create sustained outcomes.",
     name: 'Tom Archer',
-    role: 'Global Alliances and Technology Consulting Leader, PwC US',
+    role: 'Global Alliances and Technology Consulting Leader, SAS US',
   },
 }
 
@@ -46,10 +46,10 @@ const secondSectionData = {
 }
 
 interface StaticParams {
-  service: string | string[] | undefined
+  subservice: string | string[] | undefined
 }
 
-const Service = () => {
+const SubService = () => {
   const [heroSection, setHeroSection] = useState<HeroSectionType>(
     heroData['service']
   )
@@ -110,11 +110,15 @@ const Service = () => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = staticPaths.services.map((item) => ({
-    params: {
-      service: item.page,
-    },
-  }))
+  const paths = staticPaths['sub-services'].map((item) => {
+    const page = item.page.split('/')
+    return {
+      params: {
+        service: page[0],
+        subservice: page[1],
+      },
+    }
+  })
   return {
     paths,
     fallback: false,
@@ -124,12 +128,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<StaticParams> = async ({
   params,
 }) => {
-  const service = params?.service
+  const subservice = params?.subservice
   return {
     props: {
-      service,
+      subservice,
     },
   }
 }
 
-export default Service
+export default SubService
